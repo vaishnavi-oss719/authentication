@@ -34,6 +34,19 @@ This project demonstrates user authentication and authorization using **JWT** in
      |
 - (Authorization -> inheirt auth from params)
 - (Header ->keyvalue ->Authorization -> value->token
+- {
+    "message": "Authorized User",
+    "data": [
+        {
+       "_id": "69981dd42e753ff3ec5d34d0",
+            "username": "kumar",
+            "email": "kumar@gmail.com",
+            "password": "$2b$10$VImgtZaxbTl6vXWyD4qIHOoXeNaIL9iGwCktvMQzeAT0QOilrWOYy",
+            "role": "admin",
+            "__v": 0
+        }
+    ]
+}
 
 ## Deployment
 
