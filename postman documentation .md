@@ -28,12 +28,13 @@ This project demonstrates user authentication and authorization using **JWT** in
 
 ## API Endpoints
 
-- `POST /api/auth/register` → Register new user
-- `POST /api/auth/login` → Login user and get token
-- `GET /api/auth/getuser` → Get user info (Protected)
+- `POST /api/user/register` → Register new user
+- `POST /api/user/login` → Login user and get token
+- `GET /api/user/getuser` → Get user info (Protected)
      |
 - (Authorization -> inheirt auth from params)
 - (Header ->keyvalue ->Authorization -> value->token
+- output
 - {
     "message": "Authorized User",
     "data": [
