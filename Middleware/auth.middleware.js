@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const fetchUser = (req, res, next) => {
+const authMiddleware = (req, res, next) => {
   try {
     const authHeader = req.header("Authorization");
 
@@ -10,17 +10,14 @@ export const fetchUser = (req, res, next) => {
 
     const token = authHeader.split(" ")[1];
 
-    if (!token) {
-      return res.status(401).json({ message: "Invalid token format" });
-    }
-
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    req.user = decoded;   // 🔥 IMPORTANT
+    req.user = decoded;
 
     next();
   } catch (error) {
-    console.error(error);
-    res.status(401).json({ message: "Invalid token" });
+    return res.status(401).json({ message: "Invalid token" });
   }
 };
+
+export default authMiddleware;   // 🔥 VERY IMPORTANT
