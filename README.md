@@ -33,7 +33,7 @@ This project demonstrates user authentication and authorization using **JWT** in
 - `GET /api/auth/getuser` → Get user info (Protected)
      |
 - (Authorization -> inheirt auth from params)
-- (Header ->keyvalue ->Authorization -> value->token
+- (Header ->keyvalue ->Authorization -> value->Bearer token
 
 ## Deployment
 
